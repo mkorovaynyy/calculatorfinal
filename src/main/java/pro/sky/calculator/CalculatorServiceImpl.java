@@ -6,50 +6,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
     @Override
-    public String toAddTwoNumbers(String  a, String  b) {
-        try {
-            int sum = Integer.parseInt(a) + Integer.parseInt(b);
-            return "" + a + " + " + b + " = " + sum;
-        }
-       catch (NumberFormatException exception) {
-            exception.printStackTrace();
-            return "Неверный тип параметра - необходимо указать число";
-       }
+    public Integer toAddTwoNumbers(int a, int b) {
+            return a + b;
     }
 
     @Override
-    public String toSubstractTwoNumbers(String  a, String b) {;
-        try {
-            int sub = Integer.parseInt(a) - Integer.parseInt(b);
-            return "" + a + " - " + b + " = " + sub;
-        }
-        catch (NumberFormatException exception) {
-            exception.printStackTrace();
-            return "Неверный тип параметра - необходимо указать число";
-        }
+    public Integer toSubstractTwoNumbers(int a, int b) {;
+            return a - b;
     }
 
     @Override
-    public String toMultiplyTwoNumbers(String  a, String b) {
-        try {
-            int mult = Integer.parseInt(a) * Integer.parseInt(b);
-            return  "" + a + " * " + b + " = " + mult;
-        }
-        catch (NumberFormatException exception) {
-            exception.printStackTrace();
-            return "Неверный тип параметра - необходимо указать число";
-        }
+    public Integer toMultiplyTwoNumbers(int a, int b) {
+        return a * b;
     }
 
     @Override
-    public String toDivideTwoNumbers(String  a, String b) {
-        try {
-            int div = Integer.parseInt(a) / Integer.parseInt(b);
-            return  "" + a + " * " + b + " = " + div;
-        }
-        catch (Exception exception) {
-            exception.printStackTrace();
-            return "Неверный тип параметра - необходимо указать число/ либо деление на 0";
-        }
+    public Integer toDivideTwoNumbers(int a, int b) {
+        return  a / b;
     }
 }

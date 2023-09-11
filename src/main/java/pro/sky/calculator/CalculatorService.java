@@ -4,8 +4,8 @@ public interface CalculatorService {
     default String toGreet() {
         return "Добро пожаловать в калькулятор";
     }
-    String toAddTwoNumbers(String  a, String b);
-    String toSubstractTwoNumbers(String  a, String b);
-    String toMultiplyTwoNumbers(String  a, String b);
-    String toDivideTwoNumbers(String  a, String b);
+    Integer toAddTwoNumbers(int  a, int b);
+    Integer toSubstractTwoNumbers(int  a, int b);
+    Integer toMultiplyTwoNumbers(int  a, int b);
+    Integer toDivideTwoNumbers(int  a, int b);
 }
